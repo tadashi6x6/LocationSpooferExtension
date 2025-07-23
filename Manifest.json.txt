@@ -1,0 +1,40 @@
+# Location Spoofer Extension
+
+A Microsoft Edge browser extension to spoof GPS location using the HTML5 Geolocation API.
+
+## Files
+
+### manifest.json
+<xaiArtifact artifact_id="4a2fb657-6af8-47cd-bc84-3a9c4f3c9465" artifact_version_id="c67a98e3-4374-424b-aa88-8d93e5c367b9" title="manifest.json" contentType="application/json">
+{
+  "manifest_version": 3,
+  "name": "Location Spoofer",
+  "version": "1.0.0",
+  "description": "Spoof your GPS location in Microsoft Edge using custom coordinates.",
+  "permissions": [
+    "geolocation",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

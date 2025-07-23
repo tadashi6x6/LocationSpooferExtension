@@ -137,3 +137,15 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Node.js (if you add dependencies later)
+node_modules/
+package-lock.json
+
+# Build artifacts
+*.zip
+dist/
+
+# Editor files
+.vscode/
+*.code-workspace
